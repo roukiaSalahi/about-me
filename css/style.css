@@ -1,6 +1,7 @@
 body {
     background-color: #1e201e75;
-    border: thick;
+    margin-left: 3%;
+    margin-right: 3%;  
 }
 
 h1 {
@@ -8,38 +9,48 @@ text-align: center;
 font-size: 60px;
 }
 
-#name {
-    
-    font-size: 40px;
-    
+#name {  
+    font-size: 40px;  
 }
 
 footer{ 
     color: white;
     background-color: black ;
-    padding: 20px;
-    border: black;
-    
+  padding: 20px; 
 }
-.pages {
-    
+.pages {  
     display: inline;
-    margin: 100px;
-  
+    margin: 100px; 
 }
+
 a { 
     text-decoration: none;  
-color: white;
-font-size: 20px;
+    color: white;
+    font-size: 20px;
 }
 
 ul {
     background-color: black;
     padding: 15px;
-    text-align: center;
-    
+    text-align: center;   
 }
 
-#paragraph {
-    font-size: 25px;
+#bio {
+    font-size: 25px;   
 }
+
+.topTen{
+font-size:25px ;
+border: 2px solid black;
+margin:10px;
+padding: 20px 20px 20px 50px;
+background-color: #555554;
+color: white;
+}
+
+#movie {
+    font-size:25px ;
+    border: 2px solid black;
+padding: 20px;
+}
+
