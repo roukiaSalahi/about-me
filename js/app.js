@@ -7,7 +7,6 @@ alert('Hello ' + userName + ' , lets play the guessing game, i will ask you 7 qu
 
 var sum = 0;
 
-
 function askQuestion(questionText, correctAnswer) {
   var input = prompt(questionText).toLowerCase();
 
@@ -81,7 +80,7 @@ if (userNumber === number) {
             break;
         }
     }
-    alert('the correct answer is 7')
+    alert('the correct answer is' + number);
 }
 
 
