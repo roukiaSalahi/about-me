@@ -1,113 +1,80 @@
-'use strict'
-var userName = prompt('Whats your name ?')
+'use strict';
+var userName = prompt('Whats your name ?');
 //console.log('the user name is ', userName);
-document.getElementById('name').textContent = ('welcome  ' + userName)
+document.getElementById('name').textContent = ('welcome  ' + userName);
 
 alert('Hello ' + userName + ' , lets play the guessing game, i will ask you 7 questions ! ');
 
-var sum = 0
-var favColor = prompt('my favourite color is blue ? guess the answer yes or no !').toLowerCase();
-
-if (favColor === 'yes') {
-    //console.log('the user answerd yes');
-    alert('you are correct')
-    sum++
-} else if (favColor === 'no') {
-    //console.log('the user answerd no');
-    alert('oops! you are wrong')
-}
-else {
-    console.log('the user answer is', favColor);
-    alert('try again!');
-}
+var sum = 0;
 
 
-var favFood = prompt('my favourite food is burger ? guess the answer yes or no !').toLowerCase();
+function askQuestion(questionText, correctAnswer) {
+  var input = prompt(questionText).toLowerCase();
 
-if (favFood === 'yes') {
-    //console.log('the user answerd yes');
-    alert('you are wrong, its pizza')
-} else if (favFood === 'no') {
+  if ((input === "yes" || input === "no") && (input === correctAnswer)) {
     console.log('the user answerd no');
-    alert('you are correct')
-    sum++
-}
-else {
-    console.log('the user answer is', favFood);
-    alert('try again!');
-}
-
-
-var favHobby = prompt('Now lets try this ! do i like swimming ? guess the answer yes or no !').toLowerCase();
-
-if (favHobby === 'yes') {
-    //console.log('the user answerd yes');
-    alert('you are correct')
-    sum++
-} else if (favHobby === 'no') {
-    //console.log('the user answerd no');
-    alert('you are wrong')
-}
-else {
-    //console.log('the user answer is', favHobby);
-    alert('try again!');
+    alert('you are correct');
+    sum++;
+    alert('you got ' + sum + ' correct out of the 7 questions asked');
+  } else if ((input === "yes" || input === "no") && (input !== correctAnswer)) {
+    alert('you are wrong!');
+  }
+  else {
+    console.log('the user answer is', input);
+    askQuestion(questionText, correctAnswer);
+  }
 }
 
-var nationality = prompt('am i syrian ? guess the answer yes or no !').toLowerCase();
-
-if (nationality === 'yes') {
-    //console.log('the user answerd yes');
-    alert('you are correct')
-    sum++
-} else if (nationality === 'no') {
-    //console.log('the user answerd no');
-    alert('you are wrong')
-}
-else {
-    //console.log('the user answer is', nationality);
-    alert('try again!');
+function askColor(){
+  const questionText = 'my favourite color is blue ? guess the answer yes or no !';
+  askQuestion(questionText, "yes");
 }
 
-var programming = prompt('this is an easy one! do i love programming ? guess the answer yes or no !').toLowerCase();
-
-if (programming === 'yes') {
-    //console.log('the user answerd yes');
-    alert(userName + ', you are correct')
-    sum++
-} else if (programming === 'no') {
-    //console.log('the user answerd no');
-    alert(userName + ', you are wrong')
-}
-else {
-    //console.log('the user answer is', programming);
-    alert('try again ' + userName);
+function askFood() {
+  const questionText = 'my favourite food is burger ? guess the answer yes or no !';
+  askQuestion(questionText, "no");
 }
 
-var number = 7;
-var userNumber = prompt('guess a number')
-if (userNumber == 7) {
+function askHobby(){
+  const hoppyQuestionText = 'Now lets try this ! do i like swimming ? guess the answer yes or no !';
+  askQuestion(hoppyQuestionText, "yes");
+}
+
+function askNationality(){
+  const text = "am i syrian ? guess the answer yes or no !";
+  askQuestion(text, "yes");
+}
+
+function askProgramming() {
+  const text = "this is an easy one! do i love programming ? guess the answer yes or no !";
+  askQuestion(text, "yes");
+}
+
+// call function
+askColor();
+askFood();
+askHobby();
+askNationality();
+askProgramming();
+
+
+var number = 8;
+var userNumber = prompt('guess a number');
+if (userNumber === number) {
     //console.log('you are correct')
     alert('you are correct')
     sum++
-} else if (userNumber != 7) {
-
-
+} else if (userNumber != number) {
     for (var i = 0; i < 4; i++) {
-
-        if (userNumber > 7) {
+        if (userNumber > number) {
             //console.log('too high')
             alert('too high')
             userNumber = prompt('try again')
-
-
-        } else if (userNumber < 7) {
+        } else if (userNumber < number) {
             //console.log('too low')
             alert('too low')
             userNumber = prompt('try again')
-
-
         } else {
-
             //console.log('you are correct')
             alert('you got it correct')
             sum++
@@ -140,5 +107,3 @@ var arraynumbers = [3, 9, 4];
 
 
 alert('the correct numbers are 3,9,4')
-alert('you got ' + sum + ' correct out of the 7 questions asked')
-
