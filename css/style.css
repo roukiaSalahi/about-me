@@ -1,3 +1,4 @@
+  
 body {
     background-color: #1e201e75;
     margin-left: 3%;
@@ -18,7 +19,7 @@ footer{
     background-color: black ;
   padding: 20px; 
 }
-.pages {  
+nav li {  
     display: inline;
     margin: 100px; 
 }
@@ -40,17 +41,27 @@ ul {
 }
 
 .topTen{
-font-size:25px ;
+font-size:20px ;
 border: 2px solid black;
 margin:10px;
-padding: 20px 20px 20px 50px;
+padding: 20px 20px 20px 35px;
 background-color: #555554;
 color: white;
+
+
+
 }
 
 #movie {
-    font-size:25px ;
+    font-size 25;px ;
     border: 2px solid black;
 padding: 20px;
+
+}
+
+.profilePic {
+float: right;
+width: 15%;
+height: 15%;
 }
 

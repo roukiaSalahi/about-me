@@ -1,6 +1,5 @@
 'use strict';
 var userName = prompt('Whats your name ?');
-//console.log('the user name is ', userName);
 document.getElementById('name').textContent = ('welcome  ' + userName);
 
 alert('Hello ' + userName + ' , lets play the guessing game, i will ask you 7 questions ! ');
@@ -11,7 +10,6 @@ function askQuestion(questionText, correctAnswer) {
   var input = prompt(questionText).toLowerCase();
 
   if ((input === "yes" || input === "no") && (input === correctAnswer)) {
-    console.log('the user answerd no');
     alert('you are correct');
     sum++;
     alert('you got ' + sum + ' correct out of the 7 questions asked');
@@ -49,7 +47,7 @@ function askProgramming() {
   askQuestion(text, "yes");
 }
 
-// call function
+
 askColor();
 askFood();
 askHobby();
@@ -60,21 +58,21 @@ askProgramming();
 var number = 8;
 var userNumber = prompt('guess a number');
 if (userNumber === number) {
-    //console.log('you are correct')
+    
     alert('you are correct')
     sum++
 } else if (userNumber != number) {
     for (var i = 0; i < 4; i++) {
         if (userNumber > number) {
-            //console.log('too high')
+            
             alert('too high')
             userNumber = prompt('try again')
         } else if (userNumber < number) {
-            //console.log('too low')
+            
             alert('too low')
             userNumber = prompt('try again')
         } else {
-            //console.log('you are correct')
+            
             alert('you got it correct')
             sum++
             break;
@@ -90,7 +88,7 @@ var arraynumbers = [3, 9, 4];
 
     for (var i = 0; i < 6; i++) {
         if (userNumber2 == 3 || userNumber2 == 9 || userNumber2 == 4) {
-            //console.log('you are correct')
+            
             alert('you got it correct')
             sum++
             break;
